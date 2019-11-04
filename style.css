@@ -1,0 +1,395 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  color: white; 
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; 
+  top: -40px;     
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+}
+
+/* referenced homework 4 SI 339 */
+
+.skip a:focus, .skip a:active{
+  border: 2px solid black; 
+  left: auto; 
+  top: auto; 
+
+  height: auto; 
+  overflow: auto; 
+  margin: 40px; 
+  padding: 6px; 
+  z-index: 999; 
+} 
+
+
+
+
+footer{
+  
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  
+  grid-row: 7 / auto;   
+  padding-top: 30px;
+  text-align: center;
+  
+}
+
+.about-container{
+  display: grid; 
+  grid-template-columns: 1fr 5fr 1fr; 
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-column-gap: 0px; 
+  row-gap: 15px; 
+  width: 100vw; 
+}
+
+.index-container{
+  display: grid; 
+  grid-template-columns: 1fr 5fr 1fr; 
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-column-gap: 0px; 
+  row-gap: 15px; 
+  width: 100vw; 
+}
+
+.h2 {
+  grid-column: 2/ span 1;  
+  grid-row: 3/ span 1;
+}
+
+.schedule-container{
+  display: grid; 
+  grid-template-columns: 1fr 5fr 1fr; 
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-column-gap: 0px; 
+  row-gap: 15px; 
+  width: 100vw;
+}
+
+.current-image{
+  grid-column: 1/ span 3; 
+  grid-row: 3/ span 1; 
+  max-height: 700px;
+  overflow: hidden; 
+  /*Your code here */
+
+}
+
+/* .current{
+  grid-column: 2/ span 1;  
+  grid-row: 3/ span 1;
+  
+} */
+
+/* .schedule-image-one{
+  display: grid; 
+  grid-template-columns: 1fr 5fr 1fr; 
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-column-gap: 0px; 
+  grid-column: 1/ span 3; 
+  grid-row: 4/ span 1; 
+  max-height: 1,000px;
+  overflow: hidden; 
+} */
+
+.contact-container{
+  display: grid; 
+  grid-template-columns: 1fr 5fr 1fr; 
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-column-gap: 0px; 
+  row-gap: 15px; 
+  width: 100vw;
+}
+
+.name{
+  grid-column: 2/ span 1;  
+  grid-row: 4/ span 1;
+
+}
+
+input{
+  width: 50%;
+  /* grid-column: 3/ span 1;  
+  grid-row: 5/ span 1; */
+	position: absolute;
+	left: 150px;
+}
+/* label{
+	font-family: Cursive;
+} */
+
+input:focus{
+	background-color:lightgrey;
+}
+
+fieldset{
+  margin-top:25px;
+	width: 50%;
+}
+
+input[type=submit] {
+	  margin-top:25px;
+    padding:5px 15px; 
+    background:#4a89c3; 
+    border:2px solid lightgrey;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    color:white;
+}
+
+form{
+  /* margin-top: 100px; */
+	margin-bottom: 100px;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #ddd;
+  padding: 20px 0;
+  /* text-align: right; */
+  justify-content: space-evenly;
+}
+
+.flex-container ul{
+  list-style-type: none;
+  margin: 0; 
+  padding-right: 20px; 
+}
+
+.flex-container li{
+  display: inline; 
+  padding-right: 20px; 
+}
+.flex-container a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;  
+}
+.flex-container a:hover{
+  text-decoration: underline;  /*add the underline when hover*/
+}
+.flex-container a.active-link{
+  background-color: yellowgreen;  /*add the bg color when active, referenced from stack overflow*/
+}
+
+.flex-container a:focus{
+  border: 2px solid black; 
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../img/photo-1557561371-160934834af4.jpeg");  /* Your code here - Link to header.jpg in the images folder */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  /* color: white; */
+  height: 400px;                /* Parallax effect */
+  grid-column: 1/ -1; 
+  grid-row: 2/ span 1;
+}
+/* referenced hw 4 SI 339 */
+
+
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+
+
+.text-block{ 
+
+ row-gap: 15px;
+ background-color: rgba(255, 255, 255, .8);
+ border: 10px solid black;
+ padding: 30px 30px 30px 30px;
+ overflow: hidden; 
+ justify-self: center; 
+ align-self: center;
+
+}
+
+.practice{
+  grid-column: 2/ span 1;  
+  grid-row: 3/ span 1;
+}
+
+.trips{
+  grid-column: 2/ span 1;  
+  grid-row: 4/ span 1;
+}
+
+.matches{
+  grid-column: 2/ span 1;  
+  grid-row: 5/ span 1;
+}
+
+.womens{
+  grid-column: 2/ span 1;  
+  grid-row: 4/ span 1;
+}
+
+.mens{
+  grid-column: 2/ span 1;  
+  grid-row: 5/ span 1;
+}
+
+.format{
+  grid-column: 2/ span 1;  
+  grid-row: 6/ span 1;
+}
+
+.current{
+  grid-column: 2/ span 1;  
+  grid-row: 3/ span 1;
+}
+
+.past{
+  grid-column: 2/ span 1;  
+  grid-row: 5/ span 1;
+}
+
+.roster{
+  grid-column: 2/ span 1;  
+  grid-row: 6/ span 1;
+}
+
+
+
+
+/*gallery*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 4px, 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  /* margin-left: 8px;
+  margin-right: 8px; */
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.flip-card {
+  background-color: transparent;
+  min-width: 100px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* 3D effect */
+  transition: transform 3s; 
+  overflow: hidden; 
+}
+
+/* position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* horizontal flip when hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
+/* referenced from w3 schools */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
