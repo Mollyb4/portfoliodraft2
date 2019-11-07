@@ -1,11 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Righteous);
+
 html{
     scroll-behavior: smooth;
 }
 
 
 body{
-  background-color: #ddd;
+  background-color: #122166;
   font-size: 18px;
+  font-family: 'Helvetica';
   margin: 0;
   padding: 0;
 }
@@ -21,6 +24,7 @@ h1{
 h2{
   font-size: 32px;
   line-height: 1.5;
+  color:black;
 }
 
 
@@ -50,16 +54,14 @@ h2{
   z-index: 999; 
 } 
 
-
-
-
 footer{
   
-  background-color: black;
-  color: white;
+  background-color: #ffd700;
+  color:#3D424D;
   grid-column: 1 / -1;  
   grid-row: 7 / auto;   
-  padding-top: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px; 
   text-align: center;
   
 }
@@ -76,83 +78,70 @@ footer{
 .index-container{
   display: grid; 
   grid-template-columns: 1fr 5fr 1fr; 
-  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-template-rows: 30px auto auto auto auto auto auto auto auto auto auto 100px;
   grid-column-gap: 0px; 
   row-gap: 15px; 
   width: 100vw; 
 }
 
-.h2 {
+/* .h2 {
   grid-column: 2/ span 1;  
   grid-row: 3/ span 1;
-}
+  color: white; 
+} */
 
 .schedule-container{
   display: grid; 
   grid-template-columns: 1fr 5fr 1fr; 
-  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-template-rows: 30px auto auto auto auto auto auto 100px;
   grid-column-gap: 0px; 
   row-gap: 15px; 
   width: 100vw;
 }
-
-.current-image{
-  grid-column: 1/ span 3; 
-  grid-row: 3/ span 1; 
-  max-height: 700px;
-  overflow: hidden; 
-  /*Your code here */
-
-}
-
-/* .current{
-  grid-column: 2/ span 1;  
-  grid-row: 3/ span 1;
-  
-} */
-
-/* .schedule-image-one{
-  display: grid; 
-  grid-template-columns: 1fr 5fr 1fr; 
-  grid-template-rows: 30px auto auto auto auto auto 100px;
-  grid-column-gap: 0px; 
-  grid-column: 1/ span 3; 
-  grid-row: 4/ span 1; 
-  max-height: 1,000px;
-  overflow: hidden; 
-} */
-
+ 
 .contact-container{
   display: grid; 
+  /* display: inline-block;  */
   grid-template-columns: 1fr 5fr 1fr; 
-  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-template-rows: 30px auto auto auto 100px;
   grid-column-gap: 0px; 
   row-gap: 15px; 
   width: 100vw;
 }
 
-.name{
+.form{
   grid-column: 2/ span 1;  
-  grid-row: 4/ span 1;
-
+  grid-row: 5/ auto;
 }
 
 input{
-  width: 50%;
-  /* grid-column: 3/ span 1;  
-  grid-row: 5/ span 1; */
-	position: absolute;
-	left: 150px;
+  width: 30%;
+  position: absolute;
+  left: 150px;
+  display: inline-block; 
+  align-content: space-between; /*try to figure out how to do space between your columns*/
 }
-/* label{
-	font-family: Cursive;
-} */
+
+#name{ 
+  grid-row: 2/ span 1; 
+}
+
+/* label{ contact stuff************
+	color: white; 
+}
+
+input, label {
+  display:block;
+
+}
 
 input:focus{
 	background-color:lightgrey;
 }
 
 fieldset{
+  grid-column: 2/ span 1;  
+  grid-row: 5/ auto;
   margin-top:25px;
 	width: 50%;
 }
@@ -170,19 +159,22 @@ input[type=submit] {
 
 form{
   /* margin-top: 100px; */
-	margin-bottom: 100px;
-}
+	/* margin-bottom: 100px; */
+/* }  */
 
 
 .flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #ddd;
-  padding: 20px 0;
+  background-color: #ffd700;
+  padding: 20px 20px;
   /* text-align: right; */
-  justify-content: space-evenly;
+  /* justify-content: flex-end; */
+}
+.flex-container div{
+  justify-content: flex-end;
 }
 
 .flex-container ul{
@@ -196,7 +188,7 @@ form{
   padding-right: 20px; 
 }
 .flex-container a{
-  color: black;
+  color: #3D424D;
   font-weight: bold;
   text-decoration: none;  
 }
@@ -204,11 +196,12 @@ form{
   text-decoration: underline;  /*add the underline when hover*/
 }
 .flex-container a.active-link{
-  background-color: yellowgreen;  /*add the bg color when active, referenced from stack overflow*/
+  background-color: #153F7E;  /*add the bg color when active, referenced from stack overflow*/
+  color: white; 
 }
 
 .flex-container a:focus{
-  border: 2px solid black; 
+  border: 2px solid #6C7A89; 
 }
 
 header{
@@ -221,9 +214,47 @@ header{
   height: 400px;                /* Parallax effect */
   grid-column: 1/ -1; 
   grid-row: 2/ span 1;
+
 }
 /* referenced hw 4 SI 339 */
 
+  
+.index-header {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-color: #000;
+}
+
+
+.index-h1 {
+  position: relative;
+  font-family: Helvetica;
+  text-transform: uppercase;
+  font-size: 35px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, white, #fff, white);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 500%;
+  }
+}
+/*end animation*/
+/* reference for animation css link: https://codepen.io/FrankieDoodie/pen/dgVGad*/
 
 
 header p{
@@ -233,13 +264,68 @@ header p{
   text-align: center;
 }
 
+img {
+  min-width: 100px; 
+  height: 500px;
+  overflow: hidden; 
+  align-content: center;
+}
+
+.current-image {
+  grid-column: 2/ span 1; 
+  grid-row: 3/ span 1; 
+}
+
+.past-image{
+  grid-column: 2/ span 1; 
+  grid-row: 5/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: hidden; 
+}
+.womens-image{
+  grid-column: 2/ span 1; 
+  grid-row: 5/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+.mens-image{
+  grid-column: 2/ span 1; 
+  grid-row: 7/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+.tennis-ball-image{
+  grid-column: 2/ span 1; 
+  grid-row: 9/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+.winners-image{
+  grid-column: 2/ span 1; 
+  grid-row: 10/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+.champs-image{
+  grid-column: 2/ span 1; 
+  grid-row: 11/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: scroll;
+}
+
 
 
 .text-block{ 
 
  row-gap: 15px;
  background-color: rgba(255, 255, 255, .8);
- border: 10px solid black;
+ border: 10px solid white;
  padding: 30px 30px 30px 30px;
  overflow: hidden; 
  justify-self: center; 
@@ -269,22 +355,22 @@ header p{
 
 .mens{
   grid-column: 2/ span 1;  
-  grid-row: 5/ span 1;
+  grid-row: 6/ span 1;
 }
 
 .format{
   grid-column: 2/ span 1;  
-  grid-row: 6/ span 1;
+  grid-row: 8/ span 1;
 }
 
 .current{
   grid-column: 2/ span 1;  
-  grid-row: 3/ span 1;
+  grid-row: 2/ span 1;
 }
 
 .past{
   grid-column: 2/ span 1;  
-  grid-row: 5/ span 1;
+  grid-row: 4/ span 1;
 }
 
 .roster{
@@ -311,14 +397,119 @@ header p{
 
 .column img {
   margin-top: 8px;
-  /* margin-left: 8px;
-  margin-right: 8px; */
   vertical-align: middle;
   width: 100%;
 }
 
+/*tablet media query*/
+@media only screen and (min-width: 800px) {
+
+  .flex-container{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .about-container{
+    grid-template-rows: 400px 400px 400px 100px; 
+    grid-template-columns: 50px 410px 500px 410px 50px; 
+    row-gap: 50px;
+  }
+  .schedule-container{
+    grid-template-rows: 70px 400px 400px 100px 400px 400px 400px 100px; 
+    grid-template-columns: 50px 410px 500px 410px 50px; 
+  }
+  .index-container{
+    grid-template-rows: 70px 400px 400px 400px 100px 400px 100px; 
+    grid-template-columns: 50px 410px 500px 410px 50px;
+  }
+
+  img {
+    min-width: 100px; 
+    height: 400px;
+    overflow: hidden; 
+    align-content: right;
+  }
+
+  .current-image{
+    grid-column: -3/ span 2; 
+    grid-row: 2/ span 1; 
+  }
+  .past-image{
+    grid-column: 2/ span 1; 
+    grid-row: 3/ span 1; 
+    max-width: 400px;
+  }
+  .womens-image{
+    grid-column: -3/ span 1; 
+    grid-row: 2/ span 1; 
+    /* width: 100%; */
+    /* height: auto;
+    overflow: scroll; */
+  }
+  .mens-image{
+    grid-column: 2/ span 1; 
+    grid-row: 3/ span 1; 
+  }
+  .tennis-ball-image{
+    grid-column: -3/ span 1; 
+    grid-row: 4/ span 1; 
+  }
+  .winners-image{
+    grid-column: 2/ span 1; 
+    grid-row: 6/ span 1; 
+  }
+  .champs-image{
+    grid-column: 4/ span 1; 
+    grid-row: 6/ span 1; 
+  }
+
+  .text-block{
+    padding: 50px 50px 50px 50px;
+  }
+
+  .current {
+    grid-column: 2/ span 2;  
+    grid-row: 2/ span 1;
+  }
+  .past {
+    grid-column: 3/ span 2;  
+    grid-row: 3/ span 1;
+  }
+  .roster{
+    grid-column: 3/ span 1;  
+    grid-row: 6/ span 1;
+  }
+  .practice{
+    grid-column: 2/ span 2;  
+    grid-row: 1/ span 1;
+  }
+  .trips{
+    grid-column: 3/ span 2;  
+    grid-row: 2/ span 1;
+  }
+  .matches{
+    grid-column: 2/ span 2;  
+    grid-row: 3/ span 1;
+  }
+  .womens{
+    grid-column: 2/ span 2;  
+    grid-row: 2/ span 1;
+  }
+  .mens{
+    grid-column: 3/ span 2;  
+    grid-row: 3/ span 1;
+  }
+  .format{
+    grid-column: 2/ span 2;  
+    grid-row: 4/ span 1;
+  }
+
+
+}
+
+
+
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .column {
     flex: 50%;
     max-width: 50%;
@@ -326,7 +517,7 @@ header p{
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .column {
     flex: 100%;
     max-width: 100%;
@@ -337,7 +528,7 @@ header p{
   background-color: transparent;
   min-width: 100px;
   height: 200px;
-  border: 1px solid #f1f1f1;
+  border: 5px solid #f1f1f1;
   perspective: 1000px; /* 3D effect */
   transition: transform 3s; 
   overflow: hidden; 
@@ -350,11 +541,15 @@ header p{
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; 
 }
 
-/* horizontal flip when hover */
+/* horizontal flip when hover -- add focus style */
 .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card:focus{
   transform: rotateY(180deg);
 }
 
@@ -374,11 +569,47 @@ header p{
 
 /* back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color:  #1460AA;
   color: white;
+  font-size: 14px; 
   transform: rotateY(180deg);
+  padding-top: 40px;      
 }
 /* referenced from w3 schools */
+ /*end media query*/ 
+
+
+
+
+
+
+/*reduced motion media query - referenced from hw 4 SI 339*/
+/* @media screen and (prefers-reduced-motion: reduce){ */
+  /* html{ */
+    /* scroll-behavior: auto; Removes scroll animation */
+    /* animation: none;  */
+  /* } */
+
+  /* .skip a{ */
+    /* background: white; */
+    /* left: 0; */
+    /* padding: 6px; */
+    /* position: absolute; */
+    /* top: -40px; */
+    /* -webkit-transition: none !important;   Your code here - set to default setting */
+    /* transition: none !important;  Your code here - set to default setting */
+    /* z-index: 1; */
+  /* } */
+
+
+  /* .skip a:focus{
+    top:0;
+  }
+} */
+
+
+
+
 
 
 
