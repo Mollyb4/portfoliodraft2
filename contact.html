@@ -8,7 +8,7 @@
     <title>Forms</title>
   </head>
   <body>
-    <div class="skip"><a href="#form">Skip to Main Content</a></div>
+    <div class="skip"><a href="#contact">Skip to Main Content</a></div>
     <div class="flex-container">
         <div><a href="index.html">Home</a></div>
         <div><a href="about.html">About</a></div>
@@ -25,9 +25,32 @@
     </header>
 
 
-    <div class="contact-container">
+    <div class="contact-container" id="contact">
 
-    <div class="form">
+        <div class="form"> 
+
+        <form action="https://formspree.io/mzbbbjkp" method="POST">
+           
+                  
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                  
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <!-- <input type="email" name="_replyto" placeholder="Your email.."> -->
+                  
+                  
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                  
+            <input type="submit" value="Send">
+                  
+        </form>
+        </div>
+    </div>
+    
+        <!-- <div class="form">
 
         <form action="#" method = "post">
                 <fieldset> 
@@ -43,7 +66,7 @@
                     <input type = "submit" value = "Submit">
                 </fieldset>
         </form> 
-    </div>
+    </div> -->
 
     </div>
             
