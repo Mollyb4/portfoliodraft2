@@ -126,7 +126,7 @@ input[type=text], select, textarea {
   resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-/* Style the submit button with a specific background color etc */
+/* contact stuff */
 input[type=submit] {
   background-color: #ffd700;
   color: #3D424D;
@@ -136,66 +136,18 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 input[type=submit]:hover {
   background-color: #ffd700;
 }
 
-/* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
   background-color: #3D424D;
   padding: 20px;
 
 }
+/*end contact stuff*/ 
 
-/* input{
-  width: 30%;
-  position: absolute;
-  left: 150px;
-  display: inline-block; 
-  align-content: space-between; /*try to figure out how to do space between your columns*/
-/* }  */
-
-/* #name{ 
-  grid-row: 2/ span 1; 
-} */
-
-/* label{ contact stuff************
-	color: white; 
-}
-
-input, label {
-  display:block;
-
-}
-
-input:focus{
-	background-color:lightgrey;
-}
-
-fieldset{
-  grid-column: 2/ span 1;  
-  grid-row: 5/ auto;
-  margin-top:25px;
-	width: 50%;
-}
-
-input[type=submit] {
-	  margin-top:25px;
-    padding:5px 15px; 
-    background:#4a89c3; 
-    border:2px solid lightgrey;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-    color:white;
-}
-
-form{
-  /* margin-top: 100px; */
-	/* margin-bottom: 100px; */
-/* }  */
 
 
 .flex-container {
@@ -323,35 +275,35 @@ img {
   grid-row: 5/ span 1; 
   width: 100%;
   height: auto;
-  overflow: scroll;
+  overflow: hidden;
 }
 .mens-image{
   grid-column: 2/ span 1; 
   grid-row: 7/ span 1; 
   width: 100%;
   height: auto;
-  overflow: scroll;
+  overflow: hidden;
 }
 .tennis-ball-image{
   grid-column: 2/ span 1; 
   grid-row: 9/ span 1; 
   width: 100%;
   height: auto;
-  overflow: scroll;
+  overflow: hidden;
 }
 .winners-image{
   grid-column: 2/ span 1; 
   grid-row: 10/ span 1; 
   width: 100%;
   height: auto;
-  overflow: scroll;
+  overflow: hidden;
 }
 .champs-image{
   grid-column: 2/ span 1; 
   grid-row: 11/ span 1; 
   width: 100%;
   height: auto;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 
