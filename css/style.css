@@ -6,15 +6,16 @@ html{
 body{
   background-color: #122166;
   font-size: 18px;
-  font-family: 'Helvetica';
+  font-family: 'Helvetica', 'Times New Roman';
   margin: 0;
   padding: 0;
+  line-height: 1.0; 
 }
 
 h1{
   font-size: 50px;
   line-height: 1;
-  padding: 50px 0;
+  padding: 40px 0;
   text-align: center;
   color: white; 
 }
@@ -193,7 +194,7 @@ input[type=submit]:hover {
 }
 
 .flex-container a:focus{
-  border: 2px solid #6C7A89; 
+  border: 2px solid #122166; 
 }
 
 header{
@@ -248,6 +249,25 @@ header{
 /*end animation*/
 /* reference for animation css link: https://codepen.io/FrankieDoodie/pen/dgVGad*/
 
+.index-gallery{
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow: 
+    0 0.5px 0 #ccc, 
+    0 1px 0 #c9c9c9, 
+    0 2px 0 #bbb, 
+    0 3px 0 #b9b9b9, 
+    0 4px 0 #aaa, 
+    0 5px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+}
 
 header p{
   color: white;
@@ -348,12 +368,12 @@ img {
 
 .trips{
   grid-column: 2/ span 1;  
-  grid-row: 4/ span 1;
+  grid-row: 5/ span 1;
 }
 
 .matches{
   grid-column: 2/ span 1;  
-  grid-row: 5/ span 1;
+  grid-row: 7/ span 1;
 }
 
 .womens{
@@ -399,7 +419,7 @@ img {
 
 .column {
   flex: 25%;
-  max-width: 25%;
+  
   padding: 4px, 4px;
   flex: 100%;
   max-width: 100%;
@@ -410,7 +430,6 @@ img {
   vertical-align: middle;
   width: 100%;
 }
-
 
 
 
