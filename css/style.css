@@ -401,6 +401,8 @@ img {
   flex: 25%;
   max-width: 25%;
   padding: 4px, 4px;
+  flex: 100%;
+  max-width: 100%;
 }
 
 .column img {
@@ -409,10 +411,7 @@ img {
   width: 100%;
 }
 
-.column {
-  flex: 100%;
-  max-width: 100%;
-}
+
 
 
 .flip-card {
