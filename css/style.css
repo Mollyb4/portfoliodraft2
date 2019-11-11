@@ -91,7 +91,7 @@ footer{
 .schedule-container{
   display: grid; 
   grid-template-columns: 1fr 5fr 1fr; 
-  grid-template-rows: 30px auto auto auto auto auto auto 100px;
+  grid-template-rows: 30px auto auto auto auto auto auto auto auto 100px;
   grid-column-gap: 0px; 
   row-gap: 15px; 
   width: 100vw;
@@ -193,7 +193,7 @@ input[type=submit]:hover {
 
 header{
   background-attachment: fixed; /* Parallax effect */
-  background-image: url("../img/photo-1557561371-160934834af4.jpeg");  /* Your code here - Link to header.jpg in the images folder */
+  background-image: url("../img/tennis_court_bg.jpeg");  /* Your code here - Link to header.jpg in the images folder */
   background-position: center;  /* Parallax effect */
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
@@ -266,6 +266,22 @@ img {
 .past-image{
   grid-column: 2/ span 1; 
   grid-row: 5/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: hidden; 
+}
+
+.roster-image-one{
+  grid-column: 2/ span 1; 
+  grid-row: 7/ span 1; 
+  width: 100%;
+  height: auto;
+  overflow: hidden; 
+}
+
+.roster-image-two{
+  grid-column: 2/ span 1; 
+  grid-row: 8/ span 1; 
   width: 100%;
   height: auto;
   overflow: hidden; 
@@ -431,6 +447,16 @@ img {
   .past-image{
     grid-column: 2/ span 1; 
     grid-row: 3/ span 1; 
+    max-width: 400px;
+  }
+  .roster-image-one{
+    grid-column: 2/ span 1; 
+    grid-row: 6/ span 1; 
+    max-width: 400px;
+  }
+  .roster-image-two{
+    grid-column: -3/ span 1; 
+    grid-row: 5/ span 1; 
     max-width: 400px;
   }
   .womens-image{
