@@ -25,6 +25,11 @@ h2{
   color:black;
 }
 
+.flip-card-back h2 {
+  align-content: center;
+  color: #3D424D; 
+}
+
 
 .skip a{
   background: white;
@@ -384,7 +389,7 @@ img {
 
 
 
-/*gallery*/
+/*gallery -- referenced w3 schools gallery page*/
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -404,11 +409,78 @@ img {
   width: 100%;
 }
 
+.column {
+  flex: 100%;
+  max-width: 100%;
+}
+
+
+.flip-card {
+background-color: transparent;
+min-width: 100px;
+height: 300px;
+border: 5px solid #122166;
+perspective: 1000px; /* 3D effect */
+transition: transform 3s; 
+overflow: hidden; 
+}
+
+/* position the front and back side */
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.8s;
+transform-style: preserve-3d; 
+}
+
+/* horizontal flip when hover */
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card:focus{
+transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+background-color: #bbb;
+color: black;
+}
+
+/* back side */
+.flip-card-back {
+background-color:  #ffd700;
+color:#3D424D;
+font-size: 14px; 
+transform: rotateY(180deg);
+padding-top: 110px;   
+vertical-align: center;   
+}
+/* above referenced from w3 schools */
+/*end media query*/ 
+
+
 /*tablet media query*/
 @media only screen and (min-width: 768px) {
   .flex-container{
     flex-direction: row;
     justify-content: space-evenly;
+  }
+
+  .column {
+    flex: 50%;
+    max-width: 50%;
   }
 }
 
@@ -419,6 +491,19 @@ img {
     flex-direction: row;
     justify-content: space-evenly;
   } */
+  /* .column {
+    flex:33.33%; 
+    max-width: 33.33%;
+  }
+
+  .column:last-child{
+    visibility: hidden;
+  } */
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 4px, 4px;
+  }
   .about-container{
     grid-template-rows: 400px 400px 400px 100px; 
     grid-template-columns: 50px 410px 500px 410px 50px; 
@@ -530,75 +615,16 @@ img {
 
 
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 1200px) {
   .column {
     flex: 50%;
     max-width: 50%;
   }
-}
+} */
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-}
-
-.flip-card {
-  background-color: transparent;
-  min-width: 100px;
-  height: 200px;
-  border: 5px solid #f1f1f1;
-  perspective: 1000px; /* 3D effect */
-  transition: transform 3s; 
-  overflow: hidden; 
-}
-
-/* position the front and back side */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d; 
-}
-
-/* horizontal flip when hover -- add focus style */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-.flip-card:focus{
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
-
-/* back side */
-.flip-card-back {
-  background-color:  #1460AA;
-  color: white;
-  font-size: 14px; 
-  transform: rotateY(180deg);
-  padding-top: 40px;      
-}
-/* referenced from w3 schools */
- /*end media query*/ 
-
+/* @media screen and (max-width: 768px) { */
+  
 
 
 
@@ -617,8 +643,8 @@ img {
     padding: 6px;
     position: absolute;
     top: -40px;
-    -webkit-transition: none !important;   /*Your code here - set to default setting*/
-    transition: none !important;  /*Your code here - set to default setting*/
+    -webkit-transition: none !important;  
+    transition: none !important;  
     z-index: 1;
   }
 
@@ -628,9 +654,7 @@ img {
     text-transform: uppercase;
     font-size: 35px;
     letter-spacing: 4px;
-    /* overflow: hidden; */
     background: linear-gradient(90deg, white, #fff, white);
-    /* background-repeat: no-repeat; */
     background-size: 80%;
     animation: none;
     -webkit-background-clip: text;
